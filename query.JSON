@@ -1,0 +1,67 @@
+
+{ // 查询
+ //GET /index/_search
+}
+
+{
+    //  查询所有
+    "query": {
+        "match_all":{}
+    }
+}
+
+// term 使用关键词进行查询
+
+{
+    "query": {
+        "term": {
+            "filed": "value"
+        }
+    }
+}
+
+//Note 1 : 使用term 查询 会使用分词器
+// Note 2 : keyword, integer, long, double, boolean, ip 这些内容都不分词
+// text 会分词
+
+
+// range 范围查询
+{
+    "query": {
+        "range" : {
+            "filed": {
+                "gte": "value",
+                "lte": "value"
+            }
+        }
+    }
+}
+
+// prefix 前缀查询
+{
+    "query": {
+        "prefix": {
+            "filed": "value"
+        }
+    }
+}
+
+// wildcard 通配符查询
+
+{
+    "query": {
+        "wildcard": {
+            "filed" : "xxx*"
+        }
+    }
+}
+
+// fuzzy 模糊查询
+
+
+// bool 组合多个条件实现复杂查询
+// bool 中的组件相当于 and 连接
+// must 相当于 && 同时成立
+// should: 相当于 || 成立一个就行
+// must_not: 相当于 ！ 不能满足任何一个
+// filter : 
