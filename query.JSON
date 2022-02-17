@@ -20,7 +20,8 @@
     }
 }
 
-//Note 1 : 使用term 查询 会使用分词器
+//Note 1 : 使用term 查询 会使用分词器(并不是term查询会使用分词器，而是索引的一些内容已经被分词器分词了)
+// term 不会把检索词分词，而是把检索词作为一个 term/token
 // Note 2 : keyword, integer, long, double, boolean, ip 这些内容都不分词
 // text 会分词
 
