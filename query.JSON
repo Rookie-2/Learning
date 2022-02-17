@@ -24,7 +24,7 @@
 // term 不会把检索词分词，而是把检索词作为一个 term/token
 // Note 2 : keyword, integer, long, double, boolean, ip 这些内容都不分词
 // text 会分词
-
+// terms 相当于 in（ ）
 
 // range 范围查询
 {
